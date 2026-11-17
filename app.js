@@ -208,8 +208,15 @@ function boot(doc, content) {
   if (credentials) {
     const certs = (content.certifications || [])
       .map((c) => {
-        const id = c.id ? ` · ${escapeHtml(c.id)}` : "";
-        return `<li>${escapeHtml(c.name)} — ${escapeHtml(c.year)}${id}</li>`;
+        const meta = [];
+        if (c.issuer) meta.push(escapeHtml(c.issuer));
+        if (c.issued) meta.push(`Issued ${escapeHtml(c.issued)}`);
+        if (c.expires) meta.push(`Expires ${escapeHtml(c.expires)}`);
+        if (c.expired) meta.push(`Expired ${escapeHtml(c.expired)}`);
+        if (!c.issued && !c.expires && !c.expired && c.year) meta.push(escapeHtml(c.year));
+        if (c.id) meta.push(`Credential ID ${escapeHtml(c.id)}`);
+        const detail = meta.length ? `<span class="cert-meta">${meta.join(" · ")}</span>` : "";
+        return `<li><span class="cert-name">${escapeHtml(c.name)}</span>${detail}</li>`;
       })
       .join("");
     const pub = content.publication

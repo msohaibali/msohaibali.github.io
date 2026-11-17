@@ -109,4 +109,22 @@ describe("CONTENT schema", () => {
     assert.equal(CONTENT.profile.photo, "assets/photo.jpg");
     assert.equal(CONTENT.profile.phonePk, "+923155507888");
   });
+
+  it("certifications match LinkedIn licenses list", () => {
+    assert.equal(CONTENT.certifications.length, 10);
+    assert.equal(
+      CONTENT.certifications[0].name,
+      "Microsoft Certified: Azure Solutions Architect Expert"
+    );
+    assert.equal(CONTENT.certifications[0].id, "10CA870D58D58C41");
+    assert.equal(CONTENT.certifications[1].id, "2EFEDF3006A9021E");
+    assert.equal(CONTENT.certifications[4].issuer, "Oracle");
+    assert.equal(CONTENT.certifications[4].expired, "Jul 2026");
+    assert.equal(CONTENT.certifications[9].id, "2393792");
+    for (const c of CONTENT.certifications) {
+      assert.ok(c.name, "name required");
+      assert.ok(c.issuer, "issuer required");
+      assert.ok(c.issued, "issued required");
+    }
+  });
 });

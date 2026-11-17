@@ -510,6 +510,22 @@ main {
   margin-top: 1.75rem;
 }
 
+.credentials li {
+  margin-bottom: 0.85rem;
+}
+
+.cert-name {
+  display: block;
+  color: var(--text);
+}
+
+.cert-meta {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.88rem;
+  color: var(--muted-2);
+}
+
 .credentials::before {
   content: "Credentials";
   display: block;

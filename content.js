@@ -461,25 +461,60 @@ const CONTENT = {
   certifications: [
     {
       name: "Microsoft Certified: Azure Solutions Architect Expert",
-      year: "2026",
+      issuer: "Microsoft",
+      issued: "Feb 2026",
+      expires: "Feb 2027",
       id: "10CA870D58D58C41",
     },
     {
       name: "Microsoft Certified: Azure Administrator Associate",
-      year: "2026",
+      issuer: "Microsoft",
+      issued: "Feb 2026",
+      expires: "Feb 2027",
       id: "2EFEDF3006A9021E",
     },
     {
-      name: "OCI Generative AI Professional (Oracle)",
-      year: "2024",
+      name: "Model Context Protocol (MCP): Hands-On with Agentic AI",
+      issuer: "LinkedIn",
+      issued: "Nov 2025",
     },
     {
-      name: "Model Context Protocol (MCP): Hands-On with Agentic AI",
-      year: "2025",
+      name: "Mastering Model Context Protocol (MCP)",
+      issuer: "LinkedIn",
+      issued: "Nov 2025",
+    },
+    {
+      name: "OCI Generative AI Professional",
+      issuer: "Oracle",
+      issued: "Jul 2024",
+      expired: "Jul 2026",
+      id: "312793210OCI2024GAIOCP",
+    },
+    {
+      name: "Large Language Models: Text Classification for NLP using BERT",
+      issuer: "National Association of State Boards of Accountancy (NASBA)",
+      issued: "May 2024",
     },
     {
       name: "Fundamentals of Qualcomm AI",
-      year: "2023",
+      issuer: "Qualcomm",
+      issued: "Oct 2023",
+    },
+    {
+      name: "Deep Learning: Face Recognition",
+      issuer: "LinkedIn",
+      issued: "Sep 2022",
+    },
+    {
+      name: "Building Deep Learning Applications with Keras 2.0",
+      issuer: "LinkedIn",
+      issued: "Sep 2022",
+    },
+    {
+      name: "Learn to Earn Cloud Challenge: Sports Data Analysis Skills",
+      issuer: "Google Digital Academy (Skillshop)",
+      issued: "Jul 2022",
+      id: "2393792",
     },
   ],
 
