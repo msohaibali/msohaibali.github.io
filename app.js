@@ -326,6 +326,34 @@ function boot(doc, content) {
   return { applyFilter, openCase };
 }
 
+function initTheme(doc, storage) {
+  if (!doc || !doc.documentElement) return;
+  const root = doc.documentElement;
+  const store = storage || (typeof localStorage !== "undefined" ? localStorage : null);
+  let current = root.getAttribute("data-theme");
+  if (current !== "light" && current !== "dark") {
+    try {
+      current = store && store.getItem("theme") === "light" ? "light" : "dark";
+    } catch (e) {
+      current = "dark";
+    }
+    root.setAttribute("data-theme", current);
+  }
+  const radios = doc.querySelectorAll('input[name="theme"]');
+  radios.forEach((radio) => {
+    radio.checked = radio.value === current;
+    radio.addEventListener("change", () => {
+      if (!radio.checked) return;
+      root.setAttribute("data-theme", radio.value);
+      try {
+        if (store) store.setItem("theme", radio.value);
+      } catch (e) {
+        /* ignore quota / private mode */
+      }
+    });
+  });
+}
+
 const api = {
   escapeHtml,
   filterFromHash,
@@ -334,10 +362,14 @@ const api = {
   renderCaseStudy,
   renderDiagram,
   boot,
+  initTheme,
 };
 
 if (typeof module !== "undefined" && module.exports) {
   module.exports = api;
 } else if (typeof document !== "undefined") {
-  document.addEventListener("DOMContentLoaded", () => boot(document, window.CONTENT));
+  document.addEventListener("DOMContentLoaded", () => {
+    initTheme(document);
+    boot(document, window.CONTENT);
+  });
 }

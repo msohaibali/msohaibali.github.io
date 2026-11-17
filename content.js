@@ -22,7 +22,7 @@ const CONTENT = {
   },
 
   clients: [
-    { name: "IKEA", logo: "assets/logos/ikea.svg" },
+    { name: "IKEA", logo: "assets/logos/ikea.png" },
     { name: "Flow Progressive Logistics", logo: "assets/logos/flow.png" },
     { name: "Circle K", logo: "assets/logos/circlek.png" },
     { name: "Al Sulaiman Group", logo: "assets/logos/alsulaiman.png" },
@@ -35,7 +35,7 @@ const CONTENT = {
     { name: "Detasad", logo: "assets/logos/detasad.png" },
     { name: "Muvi Cinemas", logo: "assets/logos/muvi.png" },
     { name: "Catrion", logo: "assets/logos/catrion.png" },
-    { name: "Pakistan Air Force", logo: "assets/logos/paf.svg" },
+    { name: "Pakistan Air Force", logo: "assets/logos/paf.png" },
   ],
 
   filters: [
@@ -368,7 +368,7 @@ const CONTENT = {
   experience: [
     {
       org: "IKEA Alsulaiman",
-      logo: "assets/logos/ikea.svg",
+      logo: "assets/logos/ikea.png",
       title: "Technical Consultant",
       period: "Aug 2025 – Present",
       location: "Jeddah",
@@ -422,7 +422,7 @@ const CONTENT = {
     },
     {
       org: "Pakistan Air Force",
-      logo: "assets/logos/paf.svg",
+      logo: "assets/logos/paf.png",
       title: "Senior Data Scientist & AI Consultant",
       period: "Dec 2021 – Dec 2022",
       bullets: [

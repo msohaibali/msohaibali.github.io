@@ -10,6 +10,7 @@ const {
   renderCaseStudy,
   renderDiagram,
   renderCard,
+  initTheme,
 } = require("../app.js");
 
 const FILTER_IDS = CONTENT.filters.map((f) => f.id);
