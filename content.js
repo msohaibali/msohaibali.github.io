@@ -438,7 +438,7 @@ const CONTENT = {
     },
     {
       org: "Defense Solutions & Systems",
-      logo: null,
+      logo: "assets/logos/defense.png",
       title: "Data Scientist / Senior Python Developer",
       period: "Jul 2019 – Aug 2021",
       location: "Pakistan",
