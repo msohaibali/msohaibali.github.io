@@ -1,23 +1,4 @@
 :root,
-[data-theme="dark"] {
-  --bg: #0e0e10;
-  --text: #ece8e1;
-  --muted: #b5b0a7;
-  --muted-2: #8a857c;
-  --hairline: #2a2a2e;
-  --accent: #e0a458;
-  --header-bg: rgba(14, 14, 16, 0.86);
-  --logo-bg: rgba(255, 255, 255, 0.08);
-  --glow-a: rgba(224, 164, 88, 0.08);
-  --glow-b: rgba(236, 232, 225, 0.04);
-  --btn-primary-text: #1a140c;
-  --backdrop: rgba(0, 0, 0, 0.72);
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --max: 72rem;
-  --pad: clamp(1.25rem, 4vw, 2.5rem);
-}
-
 [data-theme="light"] {
   --bg: #eef1f4;
   --text: #14161a;
@@ -31,6 +12,25 @@
   --glow-b: rgba(20, 22, 26, 0.04);
   --btn-primary-text: #fffdf8;
   --backdrop: rgba(20, 22, 26, 0.45);
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --max: 72rem;
+  --pad: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+[data-theme="dark"] {
+  --bg: #0e0e10;
+  --text: #ece8e1;
+  --muted: #b5b0a7;
+  --muted-2: #8a857c;
+  --hairline: #2a2a2e;
+  --accent: #e0a458;
+  --header-bg: rgba(14, 14, 16, 0.86);
+  --logo-bg: rgba(255, 255, 255, 0.08);
+  --glow-a: rgba(224, 164, 88, 0.08);
+  --glow-b: rgba(236, 232, 225, 0.04);
+  --btn-primary-text: #1a140c;
+  --backdrop: rgba(0, 0, 0, 0.72);
 }
 
 *,

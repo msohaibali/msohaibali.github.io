@@ -333,9 +333,9 @@ function initTheme(doc, storage) {
   let current = root.getAttribute("data-theme");
   if (current !== "light" && current !== "dark") {
     try {
-      current = store && store.getItem("theme") === "light" ? "light" : "dark";
+      current = store && store.getItem("theme") === "dark" ? "dark" : "light";
     } catch (e) {
-      current = "dark";
+      current = "light";
     }
     root.setAttribute("data-theme", current);
   }

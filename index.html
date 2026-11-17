@@ -23,9 +23,9 @@
     (function () {
       try {
         var t = localStorage.getItem("theme");
-        document.documentElement.setAttribute("data-theme", t === "light" ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light");
       } catch (e) {
-        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.setAttribute("data-theme", "light");
       }
     })();
   </script>
@@ -40,11 +40,11 @@
     <fieldset class="theme-toggle" aria-label="Color theme">
       <legend class="visually-hidden">Color theme</legend>
       <label class="theme-option">
-        <input type="radio" name="theme" value="dark" checked />
+        <input type="radio" name="theme" value="dark" />
         <span>Dark</span>
       </label>
       <label class="theme-option">
-        <input type="radio" name="theme" value="light" />
+        <input type="radio" name="theme" value="light" checked />
         <span>Light</span>
       </label>
     </fieldset>
