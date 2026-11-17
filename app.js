@@ -221,7 +221,7 @@ function boot(doc, content) {
 
   const speaking = doc.getElementById("speaking");
   if (speaking) {
-    speaking.innerHTML = `<ul>${(content.speaking || [])
+    speaking.innerHTML = `<h2 id="speaking-heading">Speaking &amp; teaching</h2><ul>${(content.speaking || [])
       .map((s) => `<li>${escapeHtml(s)}</li>`)
       .join("")}</ul>`;
   }
@@ -229,6 +229,7 @@ function boot(doc, content) {
   const contact = doc.getElementById("contact");
   if (contact) {
     contact.innerHTML = `
+      <h2 id="contact-heading">Contact</h2>
       <ul class="contact-list">
         <li><a href="mailto:${escapeHtml(profile.email || "")}">${escapeHtml(profile.email || "")}</a></li>
         <li><a href="tel:${escapeHtml((profile.phone || "").replace(/\s+/g, ""))}">${escapeHtml(profile.phone || "")}</a></li>
