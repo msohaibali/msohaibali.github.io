@@ -151,9 +151,17 @@ function boot(doc, content) {
 
   const clients = doc.getElementById("clients");
   if (clients) {
-    clients.innerHTML = `<p class="client-strip">${(content.clients || [])
-      .map((c) => escapeHtml(c))
-      .join(" · ")}</p>`;
+    const items = (content.clients || [])
+      .map((c) => {
+        const name = typeof c === "string" ? c : c.name;
+        const logo = typeof c === "string" ? null : c.logo;
+        const mark = logo
+          ? `<img class="logo-mark" src="${escapeHtml(logo)}" alt="" width="28" height="28" loading="lazy" onerror="this.remove()" />`
+          : `<span class="logo-fallback" aria-hidden="true">${escapeHtml((name || "?").slice(0, 1))}</span>`;
+        return `<li class="logo-item">${mark}<span>${escapeHtml(name || "")}</span></li>`;
+      })
+      .join("");
+    clients.innerHTML = `<ul class="logo-strip" aria-label="Clients">${items}</ul>`;
   }
 
   const filtersEl = doc.getElementById("filters");
@@ -181,9 +189,14 @@ function boot(doc, content) {
     experience.innerHTML = (content.experience || [])
       .map((role) => {
         const meta = [role.location, role.note].filter(Boolean).map(escapeHtml).join(" · ");
+        const logo = role.logo
+          ? `<img class="role-logo" src="${escapeHtml(role.logo)}" alt="" width="32" height="32" loading="lazy" onerror="this.remove()" />`
+          : `<span class="role-logo role-logo-fallback" aria-hidden="true">${escapeHtml((role.org || "?").slice(0, 1))}</span>`;
         return `<article class="role">
-          <h3>${escapeHtml(role.title)}</h3>
-          <p class="role-org">${escapeHtml(role.org)} · ${escapeHtml(role.period)}</p>
+          <div class="role-head">${logo}<div>
+            <h3>${escapeHtml(role.title)}</h3>
+            <p class="role-org">${escapeHtml(role.org)} · ${escapeHtml(role.period)}</p>
+          </div></div>
           ${meta ? `<p class="role-meta">${meta}</p>` : ""}
           <ul>${(role.bullets || []).map((b) => `<li>${escapeHtml(b)}</li>`).join("")}</ul>
         </article>`;
@@ -228,11 +241,18 @@ function boot(doc, content) {
 
   const contact = doc.getElementById("contact");
   if (contact) {
+    const phoneSa = profile.phone
+      ? `<li><a href="tel:${escapeHtml(String(profile.phone).replace(/\s+/g, ""))}">${escapeHtml(profile.phone)} <span class="contact-label">Saudi Arabia</span></a></li>`
+      : "";
+    const phonePk = profile.phonePk
+      ? `<li><a href="tel:${escapeHtml(String(profile.phonePk).replace(/\s+/g, ""))}">${escapeHtml(profile.phonePk)} <span class="contact-label">Pakistan</span></a></li>`
+      : "";
     contact.innerHTML = `
       <h2 id="contact-heading">Contact</h2>
       <ul class="contact-list">
         <li><a href="mailto:${escapeHtml(profile.email || "")}">${escapeHtml(profile.email || "")}</a></li>
-        <li><a href="tel:${escapeHtml((profile.phone || "").replace(/\s+/g, ""))}">${escapeHtml(profile.phone || "")}</a></li>
+        ${phoneSa}
+        ${phonePk}
         <li><a href="${escapeHtml(profile.linkedin || "#")}" rel="noopener noreferrer" target="_blank">LinkedIn</a></li>
         <li><a href="${escapeHtml(profile.orcid || "#")}" rel="noopener noreferrer" target="_blank">ORCID</a></li>
         <li><a href="${escapeHtml(profile.cv || "#")}">Download CV</a></li>

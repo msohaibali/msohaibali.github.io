@@ -35,12 +35,7 @@ Unknown hashes fall back to **All**.
 
 ## Photo slot
 
-Leave `profile.photo` unset to show the MSA monogram in the hero.
-
-To use a photo:
-
-1. Add `assets/photo.jpg` (approved image only).
-2. Set `profile.photo: "assets/photo.jpg"` in `content.js`.
+Hero photo is set via `profile.photo` (`assets/photo.jpg`). Leave it unset to show the MSA monogram.
 
 ## Tests
 

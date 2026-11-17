@@ -13,6 +13,8 @@ const CONTENT = {
       "About 10 years designing, scaling and governing enterprise cloud-native AI/ML platforms; Generative AI, LLMs, Agentic AI, MCP, MLOps, RPA, data platforms on AWS, Azure, GCP.",
     email: "sohaibayub9@gmail.com",
     phone: "+966 53 407 8945",
+    phonePk: "+923155507888",
+    photo: "assets/photo.jpg",
     linkedin: "https://www.linkedin.com/in/msohaibali",
     orcid: "https://orcid.org/0009-0006-7828-3137",
     cv: "assets/Sohaib_Ali_CV.pdf",
@@ -20,20 +22,20 @@ const CONTENT = {
   },
 
   clients: [
-    "IKEA",
-    "Flow Progressive Logistics",
-    "Circle K",
-    "Al Sulaiman Group",
-    "Fosroc",
-    "Qatar Cool",
-    "Getz Pharma",
-    "UpBrainery",
-    "Northwestern University",
-    "Qualcomm",
-    "Detasad",
-    "Muvi Cinemas",
-    "Catrion",
-    "Pakistan Air Force",
+    { name: "IKEA", logo: "assets/logos/ikea.svg" },
+    { name: "Flow Progressive Logistics", logo: "assets/logos/flow.png" },
+    { name: "Circle K", logo: "assets/logos/circlek.png" },
+    { name: "Al Sulaiman Group", logo: "assets/logos/alsulaiman.png" },
+    { name: "Fosroc", logo: "assets/logos/fosroc.png" },
+    { name: "Qatar Cool", logo: "assets/logos/qatarcool.png" },
+    { name: "Getz Pharma", logo: "assets/logos/getz.png" },
+    { name: "UpBrainery", logo: "assets/logos/upbrainery.png" },
+    { name: "Northwestern University", logo: "assets/logos/northwestern.png" },
+    { name: "Qualcomm", logo: "assets/logos/qualcomm.svg" },
+    { name: "Detasad", logo: "assets/logos/detasad.png" },
+    { name: "Muvi Cinemas", logo: "assets/logos/muvi.png" },
+    { name: "Catrion", logo: "assets/logos/catrion.png" },
+    { name: "Pakistan Air Force", logo: "assets/logos/paf.svg" },
   ],
 
   filters: [
@@ -366,6 +368,7 @@ const CONTENT = {
   experience: [
     {
       org: "IKEA Alsulaiman",
+      logo: "assets/logos/ikea.svg",
       title: "Technical Consultant",
       period: "Aug 2025 – Present",
       location: "Jeddah",
@@ -376,6 +379,7 @@ const CONTENT = {
     },
     {
       org: "Hubcom Corporation",
+      logo: "assets/logos/hubcom.png",
       title: "Enterprise AI Architect",
       period: "Sept 2024 – Present",
       location: "Saudi Arabia",
@@ -386,6 +390,7 @@ const CONTENT = {
     },
     {
       org: "Royal Cyber Inc.",
+      logo: "assets/logos/royalcyber.png",
       title: "Senior Data Scientist, AI Practice Lead",
       period: "Dec 2023 – Oct 2024",
       location: "United States",
@@ -395,6 +400,7 @@ const CONTENT = {
     },
     {
       org: "Dice Analytics",
+      logo: "assets/logos/dice.png",
       title: "Lead Instructor & Consultant",
       period: "Apr 2023 – Oct 2024",
       location: "Pakistan",
@@ -405,6 +411,7 @@ const CONTENT = {
     },
     {
       org: "Smart Forum — client Qualcomm",
+      logo: "assets/logos/qualcomm.svg",
       title: "Senior Software Consultant / Python Backend Engineer",
       period: "Aug 2021 – Nov 2023",
       location: "United States",
@@ -415,6 +422,7 @@ const CONTENT = {
     },
     {
       org: "Pakistan Air Force",
+      logo: "assets/logos/paf.svg",
       title: "Senior Data Scientist & AI Consultant",
       period: "Dec 2021 – Dec 2022",
       bullets: [
@@ -423,6 +431,7 @@ const CONTENT = {
     },
     {
       org: "Defense Solutions & Systems",
+      logo: null,
       title: "Data Scientist / Senior Python Developer",
       period: "Jul 2019 – Aug 2021",
       location: "Pakistan",
@@ -432,6 +441,7 @@ const CONTENT = {
     },
     {
       org: "Albari Solutions",
+      logo: "assets/logos/albari.png",
       title: "Data Extractor & Software Developer",
       period: "Dec 2017 – Feb 2019",
       location: "Pakistan",

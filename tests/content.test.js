@@ -100,7 +100,13 @@ describe("CONTENT schema", () => {
   });
 
   it('clients includes "Muvi Cinemas" and "Catrion"', () => {
-    assert.ok(CONTENT.clients.includes("Muvi Cinemas"));
-    assert.ok(CONTENT.clients.includes("Catrion"));
+    const names = CONTENT.clients.map((c) => (typeof c === "string" ? c : c.name));
+    assert.ok(names.includes("Muvi Cinemas"));
+    assert.ok(names.includes("Catrion"));
+  });
+
+  it("profile has photo and Pakistani phone", () => {
+    assert.equal(CONTENT.profile.photo, "assets/photo.jpg");
+    assert.equal(CONTENT.profile.phonePk, "+923155507888");
   });
 });
