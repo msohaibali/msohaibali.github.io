@@ -8,7 +8,7 @@ const CONTENT = {
     location: "Jeddah, Saudi Arabia",
     label: "Enterprise AI Architect · Jeddah, Saudi Arabia",
     pitch:
-      "I design agentic AI systems that run real business work, for IKEA, Qualcomm and Fosroc.",
+      "I design agentic AI systems that run real business work, for Enterprises.",
     summary:
       "About 10 years designing, scaling and governing enterprise cloud-native AI/ML platforms; Generative AI, LLMs, Agentic AI, MCP, MLOps, RPA, data platforms on AWS, Azure, GCP.",
     email: "sohaibayub9@gmail.com",
