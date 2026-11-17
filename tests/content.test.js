@@ -125,6 +125,15 @@ describe("CONTENT schema", () => {
       assert.ok(c.name, "name required");
       assert.ok(c.issuer, "issuer required");
       assert.ok(c.issued, "issued required");
+      assert.ok(c.url && /^https?:\/\//.test(c.url), "verify url required");
     }
+    assert.match(
+      CONTENT.certifications[0].url,
+      /learn\.microsoft\.com.*10CA870D58D58C41/
+    );
+    assert.match(
+      CONTENT.certifications[4].url,
+      /brm-certview\.oracle\.com/
+    );
   });
 });

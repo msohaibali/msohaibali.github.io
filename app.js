@@ -216,7 +216,10 @@ function boot(doc, content) {
         if (!c.issued && !c.expires && !c.expired && c.year) meta.push(escapeHtml(c.year));
         if (c.id) meta.push(`Credential ID ${escapeHtml(c.id)}`);
         const detail = meta.length ? `<span class="cert-meta">${meta.join(" · ")}</span>` : "";
-        return `<li><span class="cert-name">${escapeHtml(c.name)}</span>${detail}</li>`;
+        const verify = c.url
+          ? `<a class="cert-verify" href="${escapeHtml(c.url)}" rel="noopener noreferrer" target="_blank">Verify credential</a>`
+          : "";
+        return `<li><span class="cert-name">${escapeHtml(c.name)}</span>${detail}${verify}</li>`;
       })
       .join("");
     const pub = content.publication

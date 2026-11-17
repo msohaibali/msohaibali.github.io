@@ -465,6 +465,7 @@ const CONTENT = {
       issued: "Feb 2026",
       expires: "Feb 2027",
       id: "10CA870D58D58C41",
+      url: "https://learn.microsoft.com/api/credentials/share/en-us/msohaibali/10CA870D58D58C41?sharingId",
     },
     {
       name: "Microsoft Certified: Azure Administrator Associate",
@@ -472,16 +473,19 @@ const CONTENT = {
       issued: "Feb 2026",
       expires: "Feb 2027",
       id: "2EFEDF3006A9021E",
+      url: "https://learn.microsoft.com/api/credentials/share/en-us/msohaibali/2EFEDF3006A9021E?sharingId",
     },
     {
       name: "Model Context Protocol (MCP): Hands-On with Agentic AI",
       issuer: "LinkedIn",
       issued: "Nov 2025",
+      url: "https://www.linkedin.com/learning/certificates/cdc724999d9e2140c84011f0202e0a05b9696bbad0c2d6e76caa6d8d4abb7f4d/",
     },
     {
       name: "Mastering Model Context Protocol (MCP)",
       issuer: "LinkedIn",
       issued: "Nov 2025",
+      url: "https://www.linkedin.com/learning/certificates/4a9aba89b2b41510b44a052c208a40786309814bd5e26af707e7bf779c3f6e79/",
     },
     {
       name: "OCI Generative AI Professional",
@@ -489,32 +493,38 @@ const CONTENT = {
       issued: "Jul 2024",
       expired: "Jul 2026",
       id: "312793210OCI2024GAIOCP",
+      url: "https://brm-certview.oracle.com/ords/certview/ecertificate?ssn=OC5143189&trackId=OCI2024GAIOCP&key=1172247831e7ef124bd6e671b969e2d83fe2f03b",
     },
     {
       name: "Large Language Models: Text Classification for NLP using BERT",
       issuer: "National Association of State Boards of Accountancy (NASBA)",
       issued: "May 2024",
+      url: "https://www.linkedin.com/learning/certificates/b65a1db4b025e2f82c919fe4d49c93e2b2732d118a695d7a03874c533469e994/",
     },
     {
       name: "Fundamentals of Qualcomm AI",
       issuer: "Qualcomm",
       issued: "Oct 2023",
+      url: "https://qwa.qualcomm.com/course-catalog/Fundamentals-of-Qualcomm-AI",
     },
     {
       name: "Deep Learning: Face Recognition",
       issuer: "LinkedIn",
       issued: "Sep 2022",
+      url: "https://www.linkedin.com/learning/certificates/911430e05feaa4739cf12aef6f558eacb10beb6fdc11ba6006279011e54fcba3/",
     },
     {
       name: "Building Deep Learning Applications with Keras 2.0",
       issuer: "LinkedIn",
       issued: "Sep 2022",
+      url: "https://www.linkedin.com/learning/certificates/a3fcc4d7edf611594829dec67a336e087c7d0b7425614cd92325a929ac2b2795/",
     },
     {
       name: "Learn to Earn Cloud Challenge: Sports Data Analysis Skills",
       issuer: "Google Digital Academy (Skillshop)",
       issued: "Jul 2022",
       id: "2393792",
+      url: "https://www.skills.google/public_profiles/8206714f-06c7-4666-9615-aec8b248ada6/badges/2393792",
     },
   ],
 

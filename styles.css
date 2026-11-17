@@ -526,6 +526,12 @@ main {
   color: var(--muted-2);
 }
 
+.cert-verify {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+}
+
 .credentials::before {
   content: "Credentials";
   display: block;
