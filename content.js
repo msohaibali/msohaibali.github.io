@@ -36,6 +36,13 @@ const CONTENT = {
     { name: "Muvi Cinemas", logo: "assets/logos/muvi.png" },
     { name: "Catrion", logo: "assets/logos/catrion.png" },
     { name: "Pakistan Air Force", logo: "assets/logos/paf.png" },
+    { name: "RapiDev", logo: "assets/logos/rapidev.png" },
+    { name: "Joyn Group", logo: "assets/logos/joyngroup.png" },
+    { name: "The Viewlytics", logo: "assets/logos/viewlytics.png" },
+    { name: "Jazz Cash", logo: "assets/logos/jazzcash.png" },
+    { name: "Telenor", logo: "assets/logos/telenor.png" },
+    { name: "Mobilink Microfinance Bank", logo: "assets/logos/mobilink.png" },
+    { name: "MTN - Benin", logo: "assets/logos/mtn-benin.svg" },
   ],
 
   filters: [
