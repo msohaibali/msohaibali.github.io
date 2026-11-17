@@ -244,7 +244,7 @@ function boot(doc, content) {
 
   const speaking = doc.getElementById("speaking");
   if (speaking) {
-    speaking.innerHTML = `<h2 id="speaking-heading">Speaking &amp; teaching</h2><ul>${(content.speaking || [])
+    speaking.innerHTML = `<h2 id="speaking-heading">Public Speaking &amp; Trainings</h2><ul>${(content.speaking || [])
       .map((s) => `<li>${escapeHtml(s)}</li>`)
       .join("")}</ul>`;
   }
